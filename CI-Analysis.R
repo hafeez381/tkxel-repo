@@ -1,6 +1,5 @@
 library(ggplot2)
 library(mosaic)
-library(tidyverse)
 library(dplyr)
 
 food <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/fastfood_calories.csv")
