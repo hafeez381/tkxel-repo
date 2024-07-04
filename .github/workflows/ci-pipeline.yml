@@ -23,7 +23,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        R -e "install.packages(c('ggplot2', 'mosaic', 'tidyverse', 'dplyr', 'lintr'), repos='http://cran.rstudio.com/')"
+        R -e "install.packages(c('ggplot2', 'mosaic', 'dplyr', 'lintr'), repos='http://cran.rstudio.com/')"
 
     - name: Lint R code
       run: |
