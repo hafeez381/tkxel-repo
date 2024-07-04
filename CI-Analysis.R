@@ -410,9 +410,6 @@ for (i in 1:num_simulations) {
 
 # Estimate the coverage probability
 coverage_probability <- coverage_count / num_simulations
-ss	overage_probability
-
-C
-
-C
-standard_error <- sqrt(coverage_probability * (1 - coverage_probability) / num_simulationsrint(standard_error)
+coverage_probability
+standard_error <- sqrt(coverage_probability * (1 - coverage_probability) / num_simulations)
+print(standard_error)
