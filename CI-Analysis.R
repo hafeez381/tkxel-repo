@@ -2,7 +2,7 @@ library(ggplot2)
 library(mosaic)
 library(dplyr)
 
-food <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/fastfood_calories.csv")
+food <- read.csv("data/fastfood_calories.csv")
 
 
 ################ One Mean CI for avg chicken calories
@@ -87,7 +87,7 @@ ci
 
 ############################ one median
 # Load the dataset
-food <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/fastfood_calories.csv")
+food <- read.csv("data/fastfood_calories.csv")
 # We're interested in dietary fiber, so we'll focus on that column
 fiber <- food$fiber
 wilcox.test(fiber,conf.int=TRUE)
@@ -169,7 +169,7 @@ if (np >= 5 && nq >= 5) {
 }
 
 ########################## paired data
-food2 <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/ms_annual_data_2022Sheet1.csv")
+food2 <- read.csv("data/ms_annual_data_2022Sheet1.csv")
 head(food2)
 
 # Filter for cheeseburgers in the item_description from Carl's Jr and Wendy's
@@ -199,7 +199,7 @@ if(nrow(carls_jr_data) > 1 & nrow(wendys_data) > 1) {
 
 #################### Paired data but separate:
 # Load the dataset
-food2 <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/ms_annual_data_2022Sheet1.csv")
+food2 <- read.csv("data/ms_annual_data_2022Sheet1.csv")
 
 # Identify non-numeric entries in the protein column
 non_numeric_protein <- grep("[^0-9.]", food2$protein)
@@ -263,8 +263,8 @@ if(!is.na(var1) && !is.na(var2) && n1 > 1 && n2 > 1) {
 }
 
 ##################paired 2021 and 2022
-food2021 <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/menustat_2021_dataset_1.xlsx - Sheet1.csv")
-food2022 <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/ms_annual_data_2022Sheet1.csv")
+food2021 <- read.csv("data/menustat_2021_dataset_1.csv")
+food2022 <- read.csv("data/ms_annual_data_2022Sheet1.csv")
 
 # Filter for Wendy's burgers in both datasets
 wendys_burgers_2021 <- subset(food2021, grepl("Burgers", food_category, ignore.case = TRUE) & restaurant == "Wendy's")
@@ -308,7 +308,7 @@ conf_int <- t_test_result$conf.int
 conf_int
 
 #################SLR and slope
-food2 <- read.csv("/Users/abdulhafeez/Library/CloudStorage/GoogleDrive-hafeez1@kenyon.edu/My Drive/Kenyon/Courses/MATH/480 Senior Seminar - CI/data/food/ms_annual_data_2022Sheet1.csv")
+food2 <- read.csv("data/ms_annual_data_2022Sheet1.csv")
 non_numeric_carb <- grep("[^0-9.]", food2$carbohydrates)
 non_numeric_sugar <- grep("[^0-9.]", food2$sugar)
 
